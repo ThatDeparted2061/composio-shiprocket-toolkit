@@ -1,0 +1,4164 @@
+[
+  {
+    "scenario": "transient",
+    "resilient": false,
+    "seed": 1,
+    "succeeded": 36,
+    "tasks": 50,
+    "seconds": 4.6,
+    "tool_calls": 220,
+    "client": {
+      "calls": 220,
+      "attempts": 220,
+      "retries": 0,
+      "refreshes": 0,
+      "logins": 1
+    },
+    "server": {
+      "requests": 221,
+      "429": 26,
+      "5xx": 8,
+      "timeouts": 4,
+      "lost": 6,
+      "expired_token": 0
+    },
+    "by_kind": {
+      "ship": "20/28",
+      "ship_fix_input": "3/6",
+      "cancel": "6/8",
+      "unserviceable": "3/4",
+      "track_unknown": "4/4"
+    },
+    "failures": [
+      [
+        "stopped at awb",
+        3
+      ],
+      [
+        "stopped at pickup",
+        3
+      ],
+      [
+        "0 orders exist",
+        3
+      ],
+      [
+        "stopped at track",
+        2
+      ],
+      [
+        "stopped at create",
+        2
+      ],
+      [
+        "did not report the pincode as unserviceable",
+        1
+      ]
+    ],
+    "results": [
+      {
+        "kind": "ship",
+        "ref": "SO-1000",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "ship",
+        "ref": "SO-1001",
+        "ok": false,
+        "why": "stopped at awb: unclassified: POST /v1/external/courier/assign/awb: HTTP 429: {\"message\": \"Too Many Attempts.\""
+      },
+      {
+        "kind": "ship",
+        "ref": "SO-1002",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "ship",
+        "ref": "SO-1003",
+        "ok": false,
+        "why": "stopped at pickup: unclassified: POST /v1/external/courier/generate/pickup: HTTP 429: {\"message\": \"Too Many Attem"
+      },
+      {
+        "kind": "ship",
+        "ref": "SO-1004",
+        "ok": false,
+        "why": "stopped at pickup: unclassified: POST /v1/external/courier/generate/pickup: HTTP 400: {\"message\": \"Already in Pic"
+      },
+      {
+        "kind": "ship",
+        "ref": "SO-1005",
+        "ok": false,
+        "why": "stopped at pickup: unclassified: POST /v1/external/courier/generate/pickup: HTTP 400: {\"message\": \"Already in Pic"
+      },
+      {
+        "kind": "ship",
+        "ref": "SO-1006",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "ship",
+        "ref": "SO-1007",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "ship",
+        "ref": "SO-1008",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "ship",
+        "ref": "SO-1009",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "ship",
+        "ref": "SO-1010",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "ship",
+        "ref": "SO-1011",
+        "ok": false,
+        "why": "stopped at track: unclassified: GET /v1/external/courier/track/awb/1410100012: HTTP 503: {\"message\": \"Bad Gatewa"
+      },
+      {
+        "kind": "ship",
+        "ref": "SO-1012",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "ship",
+        "ref": "SO-1013",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "ship",
+        "ref": "SO-1014",
+        "ok": false,
+        "why": "stopped at awb: unclassified: POST /v1/external/courier/assign/awb: HTTP 400: {\"message\": \"AWB is already assi"
+      },
+      {
+        "kind": "ship",
+        "ref": "SO-1015",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "ship",
+        "ref": "SO-1016",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "ship",
+        "ref": "SO-1017",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "ship",
+        "ref": "SO-1018",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "ship",
+        "ref": "SO-1019",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "ship",
+        "ref": "SO-1020",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "ship",
+        "ref": "SO-1021",
+        "ok": false,
+        "why": "stopped at awb: unclassified: POST /v1/external/courier/assign/awb: HTTP 429: {\"message\": \"Too Many Attempts.\""
+      },
+      {
+        "kind": "ship",
+        "ref": "SO-1022",
+        "ok": false,
+        "why": "stopped at track: unclassified: GET /v1/external/courier/track/awb/1410100023: HTTP 502: {\"message\": \"Bad Gatewa"
+      },
+      {
+        "kind": "ship",
+        "ref": "SO-1023",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "ship",
+        "ref": "SO-1024",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "ship",
+        "ref": "SO-1025",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "ship",
+        "ref": "SO-1026",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "ship",
+        "ref": "SO-1027",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "ship_fix_input",
+        "ref": "SO-2000",
+        "ok": false,
+        "why": "0 orders exist"
+      },
+      {
+        "kind": "ship_fix_input",
+        "ref": "SO-2001",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "ship_fix_input",
+        "ref": "SO-2002",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "ship_fix_input",
+        "ref": "SO-2003",
+        "ok": false,
+        "why": "0 orders exist"
+      },
+      {
+        "kind": "ship_fix_input",
+        "ref": "SO-2004",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "ship_fix_input",
+        "ref": "SO-2005",
+        "ok": false,
+        "why": "0 orders exist"
+      },
+      {
+        "kind": "cancel",
+        "ref": "SO-3000",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "cancel",
+        "ref": "SO-3001",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "cancel",
+        "ref": "SO-3002",
+        "ok": false,
+        "why": "stopped at create: unclassified: POST /v1/external/orders/create/adhoc: HTTP 502: {\"message\": \"Bad Gateway\", \"sta"
+      },
+      {
+        "kind": "cancel",
+        "ref": "SO-3003",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "cancel",
+        "ref": "SO-3004",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "cancel",
+        "ref": "SO-3005",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "cancel",
+        "ref": "SO-3006",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "cancel",
+        "ref": "SO-3007",
+        "ok": false,
+        "why": "stopped at create: unclassified: POST /v1/external/orders/create/adhoc: HTTP 422: {\"message\": \"Order Id SO-3007 a"
+      },
+      {
+        "kind": "unserviceable",
+        "ref": "SO-4000",
+        "ok": false,
+        "why": "did not report the pincode as unserviceable"
+      },
+      {
+        "kind": "unserviceable",
+        "ref": "SO-4001",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "unserviceable",
+        "ref": "SO-4002",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "unserviceable",
+        "ref": "SO-4003",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "track_unknown",
+        "ref": "99093570372",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "track_unknown",
+        "ref": "99334158799",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "track_unknown",
+        "ref": "99357111100",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "track_unknown",
+        "ref": "99016266656",
+        "ok": true,
+        "why": ""
+      }
+    ]
+  },
+  {
+    "scenario": "transient",
+    "resilient": true,
+    "seed": 1,
+    "succeeded": 50,
+    "tasks": 50,
+    "seconds": 5.8,
+    "tool_calls": 208,
+    "client": {
+      "calls": 216,
+      "attempts": 273,
+      "retries": 57,
+      "refreshes": 0,
+      "logins": 1
+    },
+    "server": {
+      "requests": 274,
+      "429": 33,
+      "5xx": 11,
+      "timeouts": 4,
+      "lost": 9,
+      "expired_token": 0
+    },
+    "by_kind": {
+      "ship": "28/28",
+      "ship_fix_input": "6/6",
+      "cancel": "8/8",
+      "unserviceable": "4/4",
+      "track_unknown": "4/4"
+    },
+    "failures": [],
+    "results": [
+      {
+        "kind": "ship",
+        "ref": "SO-1000",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "ship",
+        "ref": "SO-1001",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "ship",
+        "ref": "SO-1002",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "ship",
+        "ref": "SO-1003",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "ship",
+        "ref": "SO-1004",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "ship",
+        "ref": "SO-1005",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "ship",
+        "ref": "SO-1006",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "ship",
+        "ref": "SO-1007",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "ship",
+        "ref": "SO-1008",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "ship",
+        "ref": "SO-1009",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "ship",
+        "ref": "SO-1010",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "ship",
+        "ref": "SO-1011",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "ship",
+        "ref": "SO-1012",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "ship",
+        "ref": "SO-1013",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "ship",
+        "ref": "SO-1014",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "ship",
+        "ref": "SO-1015",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "ship",
+        "ref": "SO-1016",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "ship",
+        "ref": "SO-1017",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "ship",
+        "ref": "SO-1018",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "ship",
+        "ref": "SO-1019",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "ship",
+        "ref": "SO-1020",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "ship",
+        "ref": "SO-1021",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "ship",
+        "ref": "SO-1022",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "ship",
+        "ref": "SO-1023",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "ship",
+        "ref": "SO-1024",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "ship",
+        "ref": "SO-1025",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "ship",
+        "ref": "SO-1026",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "ship",
+        "ref": "SO-1027",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "ship_fix_input",
+        "ref": "SO-2000",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "ship_fix_input",
+        "ref": "SO-2001",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "ship_fix_input",
+        "ref": "SO-2002",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "ship_fix_input",
+        "ref": "SO-2003",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "ship_fix_input",
+        "ref": "SO-2004",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "ship_fix_input",
+        "ref": "SO-2005",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "cancel",
+        "ref": "SO-3000",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "cancel",
+        "ref": "SO-3001",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "cancel",
+        "ref": "SO-3002",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "cancel",
+        "ref": "SO-3003",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "cancel",
+        "ref": "SO-3004",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "cancel",
+        "ref": "SO-3005",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "cancel",
+        "ref": "SO-3006",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "cancel",
+        "ref": "SO-3007",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "unserviceable",
+        "ref": "SO-4000",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "unserviceable",
+        "ref": "SO-4001",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "unserviceable",
+        "ref": "SO-4002",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "unserviceable",
+        "ref": "SO-4003",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "track_unknown",
+        "ref": "99093570372",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "track_unknown",
+        "ref": "99334158799",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "track_unknown",
+        "ref": "99357111100",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "track_unknown",
+        "ref": "99016266656",
+        "ok": true,
+        "why": ""
+      }
+    ]
+  },
+  {
+    "scenario": "transient",
+    "resilient": false,
+    "seed": 2,
+    "succeeded": 39,
+    "tasks": 50,
+    "seconds": 3.6,
+    "tool_calls": 211,
+    "client": {
+      "calls": 211,
+      "attempts": 211,
+      "retries": 0,
+      "refreshes": 0,
+      "logins": 1
+    },
+    "server": {
+      "requests": 212,
+      "429": 26,
+      "5xx": 10,
+      "timeouts": 3,
+      "lost": 3,
+      "expired_token": 0
+    },
+    "by_kind": {
+      "ship": "22/28",
+      "ship_fix_input": "3/6",
+      "cancel": "6/8",
+      "unserviceable": "4/4",
+      "track_unknown": "4/4"
+    },
+    "failures": [
+      [
+        "0 orders exist",
+        5
+      ],
+      [
+        "stopped at awb",
+        3
+      ],
+      [
+        "stopped at create",
+        2
+      ],
+      [
+        "stopped at cancel",
+        1
+      ]
+    ],
+    "results": [
+      {
+        "kind": "ship",
+        "ref": "SO-1000",
+        "ok": false,
+        "why": "0 orders exist"
+      },
+      {
+        "kind": "ship",
+        "ref": "SO-1001",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "ship",
+        "ref": "SO-1002",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "ship",
+        "ref": "SO-1003",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "ship",
+        "ref": "SO-1004",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "ship",
+        "ref": "SO-1005",
+        "ok": false,
+        "why": "stopped at create: unclassified: POST /v1/external/orders/create/adhoc: HTTP 502: {\"message\": \"Bad Gateway\", \"sta"
+      },
+      {
+        "kind": "ship",
+        "ref": "SO-1006",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "ship",
+        "ref": "SO-1007",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "ship",
+        "ref": "SO-1008",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "ship",
+        "ref": "SO-1009",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "ship",
+        "ref": "SO-1010",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "ship",
+        "ref": "SO-1011",
+        "ok": false,
+        "why": "stopped at awb: unclassified: POST /v1/external/courier/assign/awb: HTTP 400: {\"message\": \"AWB is already assi"
+      },
+      {
+        "kind": "ship",
+        "ref": "SO-1012",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "ship",
+        "ref": "SO-1013",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "ship",
+        "ref": "SO-1014",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "ship",
+        "ref": "SO-1015",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "ship",
+        "ref": "SO-1016",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "ship",
+        "ref": "SO-1017",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "ship",
+        "ref": "SO-1018",
+        "ok": false,
+        "why": "0 orders exist"
+      },
+      {
+        "kind": "ship",
+        "ref": "SO-1019",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "ship",
+        "ref": "SO-1020",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "ship",
+        "ref": "SO-1021",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "ship",
+        "ref": "SO-1022",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "ship",
+        "ref": "SO-1023",
+        "ok": false,
+        "why": "0 orders exist"
+      },
+      {
+        "kind": "ship",
+        "ref": "SO-1024",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "ship",
+        "ref": "SO-1025",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "ship",
+        "ref": "SO-1026",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "ship",
+        "ref": "SO-1027",
+        "ok": false,
+        "why": "stopped at awb: unclassified: POST /v1/external/courier/assign/awb: HTTP 429: {\"message\": \"Too Many Attempts.\""
+      },
+      {
+        "kind": "ship_fix_input",
+        "ref": "SO-2000",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "ship_fix_input",
+        "ref": "SO-2001",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "ship_fix_input",
+        "ref": "SO-2002",
+        "ok": false,
+        "why": "stopped at awb: unclassified: POST /v1/external/courier/assign/awb: HTTP 429: {\"message\": \"Too Many Attempts.\""
+      },
+      {
+        "kind": "ship_fix_input",
+        "ref": "SO-2003",
+        "ok": false,
+        "why": "0 orders exist"
+      },
+      {
+        "kind": "ship_fix_input",
+        "ref": "SO-2004",
+        "ok": false,
+        "why": "0 orders exist"
+      },
+      {
+        "kind": "ship_fix_input",
+        "ref": "SO-2005",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "cancel",
+        "ref": "SO-3000",
+        "ok": false,
+        "why": "stopped at create: unclassified: POST /v1/external/orders/create/adhoc: HTTP 422: {\"message\": \"Order Id SO-3000 a"
+      },
+      {
+        "kind": "cancel",
+        "ref": "SO-3001",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "cancel",
+        "ref": "SO-3002",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "cancel",
+        "ref": "SO-3003",
+        "ok": false,
+        "why": "stopped at cancel: unclassified: POST /v1/external/orders/cancel: HTTP 429: {\"message\": \"Too Many Attempts.\", \"st"
+      },
+      {
+        "kind": "cancel",
+        "ref": "SO-3004",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "cancel",
+        "ref": "SO-3005",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "cancel",
+        "ref": "SO-3006",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "cancel",
+        "ref": "SO-3007",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "unserviceable",
+        "ref": "SO-4000",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "unserviceable",
+        "ref": "SO-4001",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "unserviceable",
+        "ref": "SO-4002",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "unserviceable",
+        "ref": "SO-4003",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "track_unknown",
+        "ref": "99093570372",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "track_unknown",
+        "ref": "99334158799",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "track_unknown",
+        "ref": "99357111100",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "track_unknown",
+        "ref": "99016266656",
+        "ok": true,
+        "why": ""
+      }
+    ]
+  },
+  {
+    "scenario": "transient",
+    "resilient": true,
+    "seed": 2,
+    "succeeded": 50,
+    "tasks": 50,
+    "seconds": 5.7,
+    "tool_calls": 208,
+    "client": {
+      "calls": 212,
+      "attempts": 266,
+      "retries": 54,
+      "refreshes": 0,
+      "logins": 1
+    },
+    "server": {
+      "requests": 267,
+      "429": 31,
+      "5xx": 14,
+      "timeouts": 4,
+      "lost": 5,
+      "expired_token": 0
+    },
+    "by_kind": {
+      "ship": "28/28",
+      "ship_fix_input": "6/6",
+      "cancel": "8/8",
+      "unserviceable": "4/4",
+      "track_unknown": "4/4"
+    },
+    "failures": [],
+    "results": [
+      {
+        "kind": "ship",
+        "ref": "SO-1000",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "ship",
+        "ref": "SO-1001",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "ship",
+        "ref": "SO-1002",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "ship",
+        "ref": "SO-1003",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "ship",
+        "ref": "SO-1004",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "ship",
+        "ref": "SO-1005",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "ship",
+        "ref": "SO-1006",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "ship",
+        "ref": "SO-1007",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "ship",
+        "ref": "SO-1008",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "ship",
+        "ref": "SO-1009",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "ship",
+        "ref": "SO-1010",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "ship",
+        "ref": "SO-1011",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "ship",
+        "ref": "SO-1012",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "ship",
+        "ref": "SO-1013",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "ship",
+        "ref": "SO-1014",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "ship",
+        "ref": "SO-1015",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "ship",
+        "ref": "SO-1016",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "ship",
+        "ref": "SO-1017",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "ship",
+        "ref": "SO-1018",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "ship",
+        "ref": "SO-1019",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "ship",
+        "ref": "SO-1020",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "ship",
+        "ref": "SO-1021",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "ship",
+        "ref": "SO-1022",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "ship",
+        "ref": "SO-1023",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "ship",
+        "ref": "SO-1024",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "ship",
+        "ref": "SO-1025",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "ship",
+        "ref": "SO-1026",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "ship",
+        "ref": "SO-1027",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "ship_fix_input",
+        "ref": "SO-2000",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "ship_fix_input",
+        "ref": "SO-2001",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "ship_fix_input",
+        "ref": "SO-2002",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "ship_fix_input",
+        "ref": "SO-2003",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "ship_fix_input",
+        "ref": "SO-2004",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "ship_fix_input",
+        "ref": "SO-2005",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "cancel",
+        "ref": "SO-3000",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "cancel",
+        "ref": "SO-3001",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "cancel",
+        "ref": "SO-3002",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "cancel",
+        "ref": "SO-3003",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "cancel",
+        "ref": "SO-3004",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "cancel",
+        "ref": "SO-3005",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "cancel",
+        "ref": "SO-3006",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "cancel",
+        "ref": "SO-3007",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "unserviceable",
+        "ref": "SO-4000",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "unserviceable",
+        "ref": "SO-4001",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "unserviceable",
+        "ref": "SO-4002",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "unserviceable",
+        "ref": "SO-4003",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "track_unknown",
+        "ref": "99093570372",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "track_unknown",
+        "ref": "99334158799",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "track_unknown",
+        "ref": "99357111100",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "track_unknown",
+        "ref": "99016266656",
+        "ok": true,
+        "why": ""
+      }
+    ]
+  },
+  {
+    "scenario": "transient",
+    "resilient": false,
+    "seed": 3,
+    "succeeded": 37,
+    "tasks": 50,
+    "seconds": 3.6,
+    "tool_calls": 220,
+    "client": {
+      "calls": 220,
+      "attempts": 220,
+      "retries": 0,
+      "refreshes": 0,
+      "logins": 1
+    },
+    "server": {
+      "requests": 221,
+      "429": 28,
+      "5xx": 11,
+      "timeouts": 3,
+      "lost": 4,
+      "expired_token": 0
+    },
+    "by_kind": {
+      "ship": "21/28",
+      "ship_fix_input": "2/6",
+      "cancel": "8/8",
+      "unserviceable": "3/4",
+      "track_unknown": "3/4"
+    },
+    "failures": [
+      [
+        "0 orders exist",
+        4
+      ],
+      [
+        "stopped at track",
+        2
+      ],
+      [
+        "stopped at awb",
+        2
+      ],
+      [
+        "stopped at create",
+        2
+      ],
+      [
+        "stopped at pickup",
+        1
+      ],
+      [
+        "did not report the pincode as unserviceable",
+        1
+      ],
+      [
+        "did not report the unknown AWB as not found",
+        1
+      ]
+    ],
+    "results": [
+      {
+        "kind": "ship",
+        "ref": "SO-1000",
+        "ok": false,
+        "why": "stopped at track: unclassified: GET /v1/external/courier/track/awb/1410100001: HTTP 429: {\"message\": \"Too Many A"
+      },
+      {
+        "kind": "ship",
+        "ref": "SO-1001",
+        "ok": false,
+        "why": "stopped at awb: unclassified: POST /v1/external/courier/assign/awb: HTTP 400: {\"message\": \"AWB is already assi"
+      },
+      {
+        "kind": "ship",
+        "ref": "SO-1002",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "ship",
+        "ref": "SO-1003",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "ship",
+        "ref": "SO-1004",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "ship",
+        "ref": "SO-1005",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "ship",
+        "ref": "SO-1006",
+        "ok": false,
+        "why": "stopped at awb: unclassified: POST /v1/external/courier/assign/awb: HTTP 502: {\"message\": \"Bad Gateway\", \"stat"
+      },
+      {
+        "kind": "ship",
+        "ref": "SO-1007",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "ship",
+        "ref": "SO-1008",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "ship",
+        "ref": "SO-1009",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "ship",
+        "ref": "SO-1010",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "ship",
+        "ref": "SO-1011",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "ship",
+        "ref": "SO-1012",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "ship",
+        "ref": "SO-1013",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "ship",
+        "ref": "SO-1014",
+        "ok": false,
+        "why": "stopped at create: unclassified: POST /v1/external/orders/create/adhoc: HTTP 429: {\"message\": \"Too Many Attempts."
+      },
+      {
+        "kind": "ship",
+        "ref": "SO-1015",
+        "ok": false,
+        "why": "0 orders exist"
+      },
+      {
+        "kind": "ship",
+        "ref": "SO-1016",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "ship",
+        "ref": "SO-1017",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "ship",
+        "ref": "SO-1018",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "ship",
+        "ref": "SO-1019",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "ship",
+        "ref": "SO-1020",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "ship",
+        "ref": "SO-1021",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "ship",
+        "ref": "SO-1022",
+        "ok": false,
+        "why": "stopped at track: unclassified: GET /v1/external/courier/track/awb/1410100022: HTTP 429: {\"message\": \"Too Many A"
+      },
+      {
+        "kind": "ship",
+        "ref": "SO-1023",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "ship",
+        "ref": "SO-1024",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "ship",
+        "ref": "SO-1025",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "ship",
+        "ref": "SO-1026",
+        "ok": false,
+        "why": "stopped at create: unclassified: POST /v1/external/orders/create/adhoc: HTTP 422: {\"message\": \"Order Id SO-1026 a"
+      },
+      {
+        "kind": "ship",
+        "ref": "SO-1027",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "ship_fix_input",
+        "ref": "SO-2000",
+        "ok": false,
+        "why": "stopped at pickup: unclassified: POST /v1/external/courier/generate/pickup: HTTP 400: {\"message\": \"Already in Pic"
+      },
+      {
+        "kind": "ship_fix_input",
+        "ref": "SO-2001",
+        "ok": false,
+        "why": "0 orders exist"
+      },
+      {
+        "kind": "ship_fix_input",
+        "ref": "SO-2002",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "ship_fix_input",
+        "ref": "SO-2003",
+        "ok": false,
+        "why": "0 orders exist"
+      },
+      {
+        "kind": "ship_fix_input",
+        "ref": "SO-2004",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "ship_fix_input",
+        "ref": "SO-2005",
+        "ok": false,
+        "why": "0 orders exist"
+      },
+      {
+        "kind": "cancel",
+        "ref": "SO-3000",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "cancel",
+        "ref": "SO-3001",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "cancel",
+        "ref": "SO-3002",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "cancel",
+        "ref": "SO-3003",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "cancel",
+        "ref": "SO-3004",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "cancel",
+        "ref": "SO-3005",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "cancel",
+        "ref": "SO-3006",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "cancel",
+        "ref": "SO-3007",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "unserviceable",
+        "ref": "SO-4000",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "unserviceable",
+        "ref": "SO-4001",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "unserviceable",
+        "ref": "SO-4002",
+        "ok": false,
+        "why": "did not report the pincode as unserviceable"
+      },
+      {
+        "kind": "unserviceable",
+        "ref": "SO-4003",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "track_unknown",
+        "ref": "99093570372",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "track_unknown",
+        "ref": "99334158799",
+        "ok": false,
+        "why": "did not report the unknown AWB as not found"
+      },
+      {
+        "kind": "track_unknown",
+        "ref": "99357111100",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "track_unknown",
+        "ref": "99016266656",
+        "ok": true,
+        "why": ""
+      }
+    ]
+  },
+  {
+    "scenario": "transient",
+    "resilient": true,
+    "seed": 3,
+    "succeeded": 50,
+    "tasks": 50,
+    "seconds": 6.2,
+    "tool_calls": 208,
+    "client": {
+      "calls": 213,
+      "attempts": 277,
+      "retries": 64,
+      "refreshes": 0,
+      "logins": 1
+    },
+    "server": {
+      "requests": 278,
+      "429": 38,
+      "5xx": 16,
+      "timeouts": 4,
+      "lost": 6,
+      "expired_token": 0
+    },
+    "by_kind": {
+      "ship": "28/28",
+      "ship_fix_input": "6/6",
+      "cancel": "8/8",
+      "unserviceable": "4/4",
+      "track_unknown": "4/4"
+    },
+    "failures": [],
+    "results": [
+      {
+        "kind": "ship",
+        "ref": "SO-1000",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "ship",
+        "ref": "SO-1001",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "ship",
+        "ref": "SO-1002",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "ship",
+        "ref": "SO-1003",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "ship",
+        "ref": "SO-1004",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "ship",
+        "ref": "SO-1005",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "ship",
+        "ref": "SO-1006",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "ship",
+        "ref": "SO-1007",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "ship",
+        "ref": "SO-1008",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "ship",
+        "ref": "SO-1009",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "ship",
+        "ref": "SO-1010",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "ship",
+        "ref": "SO-1011",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "ship",
+        "ref": "SO-1012",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "ship",
+        "ref": "SO-1013",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "ship",
+        "ref": "SO-1014",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "ship",
+        "ref": "SO-1015",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "ship",
+        "ref": "SO-1016",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "ship",
+        "ref": "SO-1017",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "ship",
+        "ref": "SO-1018",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "ship",
+        "ref": "SO-1019",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "ship",
+        "ref": "SO-1020",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "ship",
+        "ref": "SO-1021",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "ship",
+        "ref": "SO-1022",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "ship",
+        "ref": "SO-1023",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "ship",
+        "ref": "SO-1024",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "ship",
+        "ref": "SO-1025",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "ship",
+        "ref": "SO-1026",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "ship",
+        "ref": "SO-1027",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "ship_fix_input",
+        "ref": "SO-2000",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "ship_fix_input",
+        "ref": "SO-2001",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "ship_fix_input",
+        "ref": "SO-2002",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "ship_fix_input",
+        "ref": "SO-2003",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "ship_fix_input",
+        "ref": "SO-2004",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "ship_fix_input",
+        "ref": "SO-2005",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "cancel",
+        "ref": "SO-3000",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "cancel",
+        "ref": "SO-3001",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "cancel",
+        "ref": "SO-3002",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "cancel",
+        "ref": "SO-3003",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "cancel",
+        "ref": "SO-3004",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "cancel",
+        "ref": "SO-3005",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "cancel",
+        "ref": "SO-3006",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "cancel",
+        "ref": "SO-3007",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "unserviceable",
+        "ref": "SO-4000",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "unserviceable",
+        "ref": "SO-4001",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "unserviceable",
+        "ref": "SO-4002",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "unserviceable",
+        "ref": "SO-4003",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "track_unknown",
+        "ref": "99093570372",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "track_unknown",
+        "ref": "99334158799",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "track_unknown",
+        "ref": "99357111100",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "track_unknown",
+        "ref": "99016266656",
+        "ok": true,
+        "why": ""
+      }
+    ]
+  },
+  {
+    "scenario": "expiry",
+    "resilient": false,
+    "seed": 1,
+    "succeeded": 4,
+    "tasks": 50,
+    "seconds": 2.6,
+    "tool_calls": 132,
+    "client": {
+      "calls": 132,
+      "attempts": 132,
+      "retries": 0,
+      "refreshes": 0,
+      "logins": 1
+    },
+    "server": {
+      "requests": 133,
+      "429": 7,
+      "5xx": 1,
+      "timeouts": 2,
+      "lost": 2,
+      "expired_token": 83
+    },
+    "by_kind": {
+      "ship": "4/28",
+      "ship_fix_input": "0/6",
+      "cancel": "0/8",
+      "unserviceable": "0/4",
+      "track_unknown": "0/4"
+    },
+    "failures": [
+      [
+        "0 orders exist",
+        25
+      ],
+      [
+        "stopped at create",
+        8
+      ],
+      [
+        "did not report the pincode as unserviceable",
+        4
+      ],
+      [
+        "did not report the unknown AWB as not found",
+        4
+      ],
+      [
+        "stopped at pickup",
+        3
+      ],
+      [
+        "stopped at awb",
+        1
+      ],
+      [
+        "stopped at track",
+        1
+      ]
+    ],
+    "results": [
+      {
+        "kind": "ship",
+        "ref": "SO-1000",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "ship",
+        "ref": "SO-1001",
+        "ok": false,
+        "why": "stopped at awb: unclassified: POST /v1/external/courier/assign/awb: HTTP 429: {\"message\": \"Too Many Attempts.\""
+      },
+      {
+        "kind": "ship",
+        "ref": "SO-1002",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "ship",
+        "ref": "SO-1003",
+        "ok": false,
+        "why": "stopped at pickup: unclassified: POST /v1/external/courier/generate/pickup: HTTP 429: {\"message\": \"Too Many Attem"
+      },
+      {
+        "kind": "ship",
+        "ref": "SO-1004",
+        "ok": false,
+        "why": "stopped at pickup: unclassified: POST /v1/external/courier/generate/pickup: HTTP 400: {\"message\": \"Already in Pic"
+      },
+      {
+        "kind": "ship",
+        "ref": "SO-1005",
+        "ok": false,
+        "why": "stopped at pickup: unclassified: POST /v1/external/courier/generate/pickup: HTTP 400: {\"message\": \"Already in Pic"
+      },
+      {
+        "kind": "ship",
+        "ref": "SO-1006",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "ship",
+        "ref": "SO-1007",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "ship",
+        "ref": "SO-1008",
+        "ok": false,
+        "why": "stopped at track: unclassified: GET /v1/external/courier/track/awb/1410100009: HTTP 401: {\"message\": \"Token has "
+      },
+      {
+        "kind": "ship",
+        "ref": "SO-1009",
+        "ok": false,
+        "why": "0 orders exist"
+      },
+      {
+        "kind": "ship",
+        "ref": "SO-1010",
+        "ok": false,
+        "why": "0 orders exist"
+      },
+      {
+        "kind": "ship",
+        "ref": "SO-1011",
+        "ok": false,
+        "why": "0 orders exist"
+      },
+      {
+        "kind": "ship",
+        "ref": "SO-1012",
+        "ok": false,
+        "why": "0 orders exist"
+      },
+      {
+        "kind": "ship",
+        "ref": "SO-1013",
+        "ok": false,
+        "why": "0 orders exist"
+      },
+      {
+        "kind": "ship",
+        "ref": "SO-1014",
+        "ok": false,
+        "why": "0 orders exist"
+      },
+      {
+        "kind": "ship",
+        "ref": "SO-1015",
+        "ok": false,
+        "why": "0 orders exist"
+      },
+      {
+        "kind": "ship",
+        "ref": "SO-1016",
+        "ok": false,
+        "why": "0 orders exist"
+      },
+      {
+        "kind": "ship",
+        "ref": "SO-1017",
+        "ok": false,
+        "why": "0 orders exist"
+      },
+      {
+        "kind": "ship",
+        "ref": "SO-1018",
+        "ok": false,
+        "why": "0 orders exist"
+      },
+      {
+        "kind": "ship",
+        "ref": "SO-1019",
+        "ok": false,
+        "why": "0 orders exist"
+      },
+      {
+        "kind": "ship",
+        "ref": "SO-1020",
+        "ok": false,
+        "why": "0 orders exist"
+      },
+      {
+        "kind": "ship",
+        "ref": "SO-1021",
+        "ok": false,
+        "why": "0 orders exist"
+      },
+      {
+        "kind": "ship",
+        "ref": "SO-1022",
+        "ok": false,
+        "why": "0 orders exist"
+      },
+      {
+        "kind": "ship",
+        "ref": "SO-1023",
+        "ok": false,
+        "why": "0 orders exist"
+      },
+      {
+        "kind": "ship",
+        "ref": "SO-1024",
+        "ok": false,
+        "why": "0 orders exist"
+      },
+      {
+        "kind": "ship",
+        "ref": "SO-1025",
+        "ok": false,
+        "why": "0 orders exist"
+      },
+      {
+        "kind": "ship",
+        "ref": "SO-1026",
+        "ok": false,
+        "why": "0 orders exist"
+      },
+      {
+        "kind": "ship",
+        "ref": "SO-1027",
+        "ok": false,
+        "why": "0 orders exist"
+      },
+      {
+        "kind": "ship_fix_input",
+        "ref": "SO-2000",
+        "ok": false,
+        "why": "0 orders exist"
+      },
+      {
+        "kind": "ship_fix_input",
+        "ref": "SO-2001",
+        "ok": false,
+        "why": "0 orders exist"
+      },
+      {
+        "kind": "ship_fix_input",
+        "ref": "SO-2002",
+        "ok": false,
+        "why": "0 orders exist"
+      },
+      {
+        "kind": "ship_fix_input",
+        "ref": "SO-2003",
+        "ok": false,
+        "why": "0 orders exist"
+      },
+      {
+        "kind": "ship_fix_input",
+        "ref": "SO-2004",
+        "ok": false,
+        "why": "0 orders exist"
+      },
+      {
+        "kind": "ship_fix_input",
+        "ref": "SO-2005",
+        "ok": false,
+        "why": "0 orders exist"
+      },
+      {
+        "kind": "cancel",
+        "ref": "SO-3000",
+        "ok": false,
+        "why": "stopped at create: unclassified: POST /v1/external/orders/create/adhoc: HTTP 401: {\"message\": \"Token has expired\""
+      },
+      {
+        "kind": "cancel",
+        "ref": "SO-3001",
+        "ok": false,
+        "why": "stopped at create: unclassified: POST /v1/external/orders/create/adhoc: HTTP 401: {\"message\": \"Token has expired\""
+      },
+      {
+        "kind": "cancel",
+        "ref": "SO-3002",
+        "ok": false,
+        "why": "stopped at create: unclassified: POST /v1/external/orders/create/adhoc: HTTP 401: {\"message\": \"Token has expired\""
+      },
+      {
+        "kind": "cancel",
+        "ref": "SO-3003",
+        "ok": false,
+        "why": "stopped at create: unclassified: POST /v1/external/orders/create/adhoc: HTTP 401: {\"message\": \"Token has expired\""
+      },
+      {
+        "kind": "cancel",
+        "ref": "SO-3004",
+        "ok": false,
+        "why": "stopped at create: unclassified: POST /v1/external/orders/create/adhoc: HTTP 401: {\"message\": \"Token has expired\""
+      },
+      {
+        "kind": "cancel",
+        "ref": "SO-3005",
+        "ok": false,
+        "why": "stopped at create: unclassified: POST /v1/external/orders/create/adhoc: HTTP 401: {\"message\": \"Token has expired\""
+      },
+      {
+        "kind": "cancel",
+        "ref": "SO-3006",
+        "ok": false,
+        "why": "stopped at create: unclassified: POST /v1/external/orders/create/adhoc: HTTP 401: {\"message\": \"Token has expired\""
+      },
+      {
+        "kind": "cancel",
+        "ref": "SO-3007",
+        "ok": false,
+        "why": "stopped at create: unclassified: POST /v1/external/orders/create/adhoc: HTTP 401: {\"message\": \"Token has expired\""
+      },
+      {
+        "kind": "unserviceable",
+        "ref": "SO-4000",
+        "ok": false,
+        "why": "did not report the pincode as unserviceable"
+      },
+      {
+        "kind": "unserviceable",
+        "ref": "SO-4001",
+        "ok": false,
+        "why": "did not report the pincode as unserviceable"
+      },
+      {
+        "kind": "unserviceable",
+        "ref": "SO-4002",
+        "ok": false,
+        "why": "did not report the pincode as unserviceable"
+      },
+      {
+        "kind": "unserviceable",
+        "ref": "SO-4003",
+        "ok": false,
+        "why": "did not report the pincode as unserviceable"
+      },
+      {
+        "kind": "track_unknown",
+        "ref": "99093570372",
+        "ok": false,
+        "why": "did not report the unknown AWB as not found"
+      },
+      {
+        "kind": "track_unknown",
+        "ref": "99334158799",
+        "ok": false,
+        "why": "did not report the unknown AWB as not found"
+      },
+      {
+        "kind": "track_unknown",
+        "ref": "99357111100",
+        "ok": false,
+        "why": "did not report the unknown AWB as not found"
+      },
+      {
+        "kind": "track_unknown",
+        "ref": "99016266656",
+        "ok": false,
+        "why": "did not report the unknown AWB as not found"
+      }
+    ]
+  },
+  {
+    "scenario": "expiry",
+    "resilient": true,
+    "seed": 1,
+    "succeeded": 50,
+    "tasks": 50,
+    "seconds": 5.6,
+    "tool_calls": 208,
+    "client": {
+      "calls": 215,
+      "attempts": 271,
+      "retries": 56,
+      "refreshes": 2,
+      "logins": 3
+    },
+    "server": {
+      "requests": 274,
+      "429": 32,
+      "5xx": 11,
+      "timeouts": 4,
+      "lost": 9,
+      "expired_token": 0
+    },
+    "by_kind": {
+      "ship": "28/28",
+      "ship_fix_input": "6/6",
+      "cancel": "8/8",
+      "unserviceable": "4/4",
+      "track_unknown": "4/4"
+    },
+    "failures": [],
+    "results": [
+      {
+        "kind": "ship",
+        "ref": "SO-1000",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "ship",
+        "ref": "SO-1001",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "ship",
+        "ref": "SO-1002",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "ship",
+        "ref": "SO-1003",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "ship",
+        "ref": "SO-1004",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "ship",
+        "ref": "SO-1005",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "ship",
+        "ref": "SO-1006",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "ship",
+        "ref": "SO-1007",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "ship",
+        "ref": "SO-1008",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "ship",
+        "ref": "SO-1009",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "ship",
+        "ref": "SO-1010",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "ship",
+        "ref": "SO-1011",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "ship",
+        "ref": "SO-1012",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "ship",
+        "ref": "SO-1013",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "ship",
+        "ref": "SO-1014",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "ship",
+        "ref": "SO-1015",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "ship",
+        "ref": "SO-1016",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "ship",
+        "ref": "SO-1017",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "ship",
+        "ref": "SO-1018",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "ship",
+        "ref": "SO-1019",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "ship",
+        "ref": "SO-1020",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "ship",
+        "ref": "SO-1021",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "ship",
+        "ref": "SO-1022",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "ship",
+        "ref": "SO-1023",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "ship",
+        "ref": "SO-1024",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "ship",
+        "ref": "SO-1025",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "ship",
+        "ref": "SO-1026",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "ship",
+        "ref": "SO-1027",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "ship_fix_input",
+        "ref": "SO-2000",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "ship_fix_input",
+        "ref": "SO-2001",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "ship_fix_input",
+        "ref": "SO-2002",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "ship_fix_input",
+        "ref": "SO-2003",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "ship_fix_input",
+        "ref": "SO-2004",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "ship_fix_input",
+        "ref": "SO-2005",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "cancel",
+        "ref": "SO-3000",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "cancel",
+        "ref": "SO-3001",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "cancel",
+        "ref": "SO-3002",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "cancel",
+        "ref": "SO-3003",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "cancel",
+        "ref": "SO-3004",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "cancel",
+        "ref": "SO-3005",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "cancel",
+        "ref": "SO-3006",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "cancel",
+        "ref": "SO-3007",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "unserviceable",
+        "ref": "SO-4000",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "unserviceable",
+        "ref": "SO-4001",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "unserviceable",
+        "ref": "SO-4002",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "unserviceable",
+        "ref": "SO-4003",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "track_unknown",
+        "ref": "99093570372",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "track_unknown",
+        "ref": "99334158799",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "track_unknown",
+        "ref": "99357111100",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "track_unknown",
+        "ref": "99016266656",
+        "ok": true,
+        "why": ""
+      }
+    ]
+  },
+  {
+    "scenario": "expiry",
+    "resilient": false,
+    "seed": 2,
+    "succeeded": 24,
+    "tasks": 50,
+    "seconds": 2.6,
+    "tool_calls": 203,
+    "client": {
+      "calls": 203,
+      "attempts": 203,
+      "retries": 0,
+      "refreshes": 0,
+      "logins": 1
+    },
+    "server": {
+      "requests": 204,
+      "429": 20,
+      "5xx": 10,
+      "timeouts": 2,
+      "lost": 2,
+      "expired_token": 34
+    },
+    "by_kind": {
+      "ship": "22/28",
+      "ship_fix_input": "2/6",
+      "cancel": "0/8",
+      "unserviceable": "0/4",
+      "track_unknown": "0/4"
+    },
+    "failures": [
+      [
+        "stopped at create",
+        9
+      ],
+      [
+        "0 orders exist",
+        6
+      ],
+      [
+        "did not report the pincode as unserviceable",
+        4
+      ],
+      [
+        "did not report the unknown AWB as not found",
+        4
+      ],
+      [
+        "stopped at awb",
+        3
+      ]
+    ],
+    "results": [
+      {
+        "kind": "ship",
+        "ref": "SO-1000",
+        "ok": false,
+        "why": "0 orders exist"
+      },
+      {
+        "kind": "ship",
+        "ref": "SO-1001",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "ship",
+        "ref": "SO-1002",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "ship",
+        "ref": "SO-1003",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "ship",
+        "ref": "SO-1004",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "ship",
+        "ref": "SO-1005",
+        "ok": false,
+        "why": "stopped at create: unclassified: POST /v1/external/orders/create/adhoc: HTTP 502: {\"message\": \"Bad Gateway\", \"sta"
+      },
+      {
+        "kind": "ship",
+        "ref": "SO-1006",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "ship",
+        "ref": "SO-1007",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "ship",
+        "ref": "SO-1008",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "ship",
+        "ref": "SO-1009",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "ship",
+        "ref": "SO-1010",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "ship",
+        "ref": "SO-1011",
+        "ok": false,
+        "why": "stopped at awb: unclassified: POST /v1/external/courier/assign/awb: HTTP 400: {\"message\": \"AWB is already assi"
+      },
+      {
+        "kind": "ship",
+        "ref": "SO-1012",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "ship",
+        "ref": "SO-1013",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "ship",
+        "ref": "SO-1014",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "ship",
+        "ref": "SO-1015",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "ship",
+        "ref": "SO-1016",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "ship",
+        "ref": "SO-1017",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "ship",
+        "ref": "SO-1018",
+        "ok": false,
+        "why": "0 orders exist"
+      },
+      {
+        "kind": "ship",
+        "ref": "SO-1019",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "ship",
+        "ref": "SO-1020",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "ship",
+        "ref": "SO-1021",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "ship",
+        "ref": "SO-1022",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "ship",
+        "ref": "SO-1023",
+        "ok": false,
+        "why": "0 orders exist"
+      },
+      {
+        "kind": "ship",
+        "ref": "SO-1024",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "ship",
+        "ref": "SO-1025",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "ship",
+        "ref": "SO-1026",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "ship",
+        "ref": "SO-1027",
+        "ok": false,
+        "why": "stopped at awb: unclassified: POST /v1/external/courier/assign/awb: HTTP 429: {\"message\": \"Too Many Attempts.\""
+      },
+      {
+        "kind": "ship_fix_input",
+        "ref": "SO-2000",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "ship_fix_input",
+        "ref": "SO-2001",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "ship_fix_input",
+        "ref": "SO-2002",
+        "ok": false,
+        "why": "stopped at awb: unclassified: POST /v1/external/courier/assign/awb: HTTP 429: {\"message\": \"Too Many Attempts.\""
+      },
+      {
+        "kind": "ship_fix_input",
+        "ref": "SO-2003",
+        "ok": false,
+        "why": "0 orders exist"
+      },
+      {
+        "kind": "ship_fix_input",
+        "ref": "SO-2004",
+        "ok": false,
+        "why": "0 orders exist"
+      },
+      {
+        "kind": "ship_fix_input",
+        "ref": "SO-2005",
+        "ok": false,
+        "why": "0 orders exist"
+      },
+      {
+        "kind": "cancel",
+        "ref": "SO-3000",
+        "ok": false,
+        "why": "stopped at create: unclassified: POST /v1/external/orders/create/adhoc: HTTP 401: {\"message\": \"Token has expired\""
+      },
+      {
+        "kind": "cancel",
+        "ref": "SO-3001",
+        "ok": false,
+        "why": "stopped at create: unclassified: POST /v1/external/orders/create/adhoc: HTTP 401: {\"message\": \"Token has expired\""
+      },
+      {
+        "kind": "cancel",
+        "ref": "SO-3002",
+        "ok": false,
+        "why": "stopped at create: unclassified: POST /v1/external/orders/create/adhoc: HTTP 401: {\"message\": \"Token has expired\""
+      },
+      {
+        "kind": "cancel",
+        "ref": "SO-3003",
+        "ok": false,
+        "why": "stopped at create: unclassified: POST /v1/external/orders/create/adhoc: HTTP 401: {\"message\": \"Token has expired\""
+      },
+      {
+        "kind": "cancel",
+        "ref": "SO-3004",
+        "ok": false,
+        "why": "stopped at create: unclassified: POST /v1/external/orders/create/adhoc: HTTP 401: {\"message\": \"Token has expired\""
+      },
+      {
+        "kind": "cancel",
+        "ref": "SO-3005",
+        "ok": false,
+        "why": "stopped at create: unclassified: POST /v1/external/orders/create/adhoc: HTTP 401: {\"message\": \"Token has expired\""
+      },
+      {
+        "kind": "cancel",
+        "ref": "SO-3006",
+        "ok": false,
+        "why": "stopped at create: unclassified: POST /v1/external/orders/create/adhoc: HTTP 401: {\"message\": \"Token has expired\""
+      },
+      {
+        "kind": "cancel",
+        "ref": "SO-3007",
+        "ok": false,
+        "why": "stopped at create: unclassified: POST /v1/external/orders/create/adhoc: HTTP 401: {\"message\": \"Token has expired\""
+      },
+      {
+        "kind": "unserviceable",
+        "ref": "SO-4000",
+        "ok": false,
+        "why": "did not report the pincode as unserviceable"
+      },
+      {
+        "kind": "unserviceable",
+        "ref": "SO-4001",
+        "ok": false,
+        "why": "did not report the pincode as unserviceable"
+      },
+      {
+        "kind": "unserviceable",
+        "ref": "SO-4002",
+        "ok": false,
+        "why": "did not report the pincode as unserviceable"
+      },
+      {
+        "kind": "unserviceable",
+        "ref": "SO-4003",
+        "ok": false,
+        "why": "did not report the pincode as unserviceable"
+      },
+      {
+        "kind": "track_unknown",
+        "ref": "99093570372",
+        "ok": false,
+        "why": "did not report the unknown AWB as not found"
+      },
+      {
+        "kind": "track_unknown",
+        "ref": "99334158799",
+        "ok": false,
+        "why": "did not report the unknown AWB as not found"
+      },
+      {
+        "kind": "track_unknown",
+        "ref": "99357111100",
+        "ok": false,
+        "why": "did not report the unknown AWB as not found"
+      },
+      {
+        "kind": "track_unknown",
+        "ref": "99016266656",
+        "ok": false,
+        "why": "did not report the unknown AWB as not found"
+      }
+    ]
+  },
+  {
+    "scenario": "expiry",
+    "resilient": true,
+    "seed": 2,
+    "succeeded": 50,
+    "tasks": 50,
+    "seconds": 5.7,
+    "tool_calls": 208,
+    "client": {
+      "calls": 211,
+      "attempts": 264,
+      "retries": 53,
+      "refreshes": 2,
+      "logins": 3
+    },
+    "server": {
+      "requests": 267,
+      "429": 31,
+      "5xx": 14,
+      "timeouts": 4,
+      "lost": 4,
+      "expired_token": 0
+    },
+    "by_kind": {
+      "ship": "28/28",
+      "ship_fix_input": "6/6",
+      "cancel": "8/8",
+      "unserviceable": "4/4",
+      "track_unknown": "4/4"
+    },
+    "failures": [],
+    "results": [
+      {
+        "kind": "ship",
+        "ref": "SO-1000",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "ship",
+        "ref": "SO-1001",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "ship",
+        "ref": "SO-1002",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "ship",
+        "ref": "SO-1003",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "ship",
+        "ref": "SO-1004",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "ship",
+        "ref": "SO-1005",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "ship",
+        "ref": "SO-1006",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "ship",
+        "ref": "SO-1007",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "ship",
+        "ref": "SO-1008",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "ship",
+        "ref": "SO-1009",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "ship",
+        "ref": "SO-1010",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "ship",
+        "ref": "SO-1011",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "ship",
+        "ref": "SO-1012",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "ship",
+        "ref": "SO-1013",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "ship",
+        "ref": "SO-1014",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "ship",
+        "ref": "SO-1015",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "ship",
+        "ref": "SO-1016",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "ship",
+        "ref": "SO-1017",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "ship",
+        "ref": "SO-1018",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "ship",
+        "ref": "SO-1019",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "ship",
+        "ref": "SO-1020",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "ship",
+        "ref": "SO-1021",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "ship",
+        "ref": "SO-1022",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "ship",
+        "ref": "SO-1023",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "ship",
+        "ref": "SO-1024",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "ship",
+        "ref": "SO-1025",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "ship",
+        "ref": "SO-1026",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "ship",
+        "ref": "SO-1027",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "ship_fix_input",
+        "ref": "SO-2000",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "ship_fix_input",
+        "ref": "SO-2001",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "ship_fix_input",
+        "ref": "SO-2002",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "ship_fix_input",
+        "ref": "SO-2003",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "ship_fix_input",
+        "ref": "SO-2004",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "ship_fix_input",
+        "ref": "SO-2005",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "cancel",
+        "ref": "SO-3000",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "cancel",
+        "ref": "SO-3001",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "cancel",
+        "ref": "SO-3002",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "cancel",
+        "ref": "SO-3003",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "cancel",
+        "ref": "SO-3004",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "cancel",
+        "ref": "SO-3005",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "cancel",
+        "ref": "SO-3006",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "cancel",
+        "ref": "SO-3007",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "unserviceable",
+        "ref": "SO-4000",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "unserviceable",
+        "ref": "SO-4001",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "unserviceable",
+        "ref": "SO-4002",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "unserviceable",
+        "ref": "SO-4003",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "track_unknown",
+        "ref": "99093570372",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "track_unknown",
+        "ref": "99334158799",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "track_unknown",
+        "ref": "99357111100",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "track_unknown",
+        "ref": "99016266656",
+        "ok": true,
+        "why": ""
+      }
+    ]
+  },
+  {
+    "scenario": "expiry",
+    "resilient": false,
+    "seed": 3,
+    "succeeded": 23,
+    "tasks": 50,
+    "seconds": 2.6,
+    "tool_calls": 209,
+    "client": {
+      "calls": 209,
+      "attempts": 209,
+      "retries": 0,
+      "refreshes": 0,
+      "logins": 1
+    },
+    "server": {
+      "requests": 210,
+      "429": 20,
+      "5xx": 7,
+      "timeouts": 2,
+      "lost": 4,
+      "expired_token": 31
+    },
+    "by_kind": {
+      "ship": "21/28",
+      "ship_fix_input": "2/6",
+      "cancel": "0/8",
+      "unserviceable": "0/4",
+      "track_unknown": "0/4"
+    },
+    "failures": [
+      [
+        "stopped at create",
+        9
+      ],
+      [
+        "0 orders exist",
+        4
+      ],
+      [
+        "did not report the pincode as unserviceable",
+        4
+      ],
+      [
+        "did not report the unknown AWB as not found",
+        4
+      ],
+      [
+        "stopped at track",
+        2
+      ],
+      [
+        "stopped at awb",
+        2
+      ],
+      [
+        "stopped at pickup",
+        1
+      ],
+      [
+        "stopped at cancel",
+        1
+      ]
+    ],
+    "results": [
+      {
+        "kind": "ship",
+        "ref": "SO-1000",
+        "ok": false,
+        "why": "stopped at track: unclassified: GET /v1/external/courier/track/awb/1410100001: HTTP 429: {\"message\": \"Too Many A"
+      },
+      {
+        "kind": "ship",
+        "ref": "SO-1001",
+        "ok": false,
+        "why": "stopped at awb: unclassified: POST /v1/external/courier/assign/awb: HTTP 400: {\"message\": \"AWB is already assi"
+      },
+      {
+        "kind": "ship",
+        "ref": "SO-1002",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "ship",
+        "ref": "SO-1003",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "ship",
+        "ref": "SO-1004",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "ship",
+        "ref": "SO-1005",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "ship",
+        "ref": "SO-1006",
+        "ok": false,
+        "why": "stopped at awb: unclassified: POST /v1/external/courier/assign/awb: HTTP 502: {\"message\": \"Bad Gateway\", \"stat"
+      },
+      {
+        "kind": "ship",
+        "ref": "SO-1007",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "ship",
+        "ref": "SO-1008",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "ship",
+        "ref": "SO-1009",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "ship",
+        "ref": "SO-1010",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "ship",
+        "ref": "SO-1011",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "ship",
+        "ref": "SO-1012",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "ship",
+        "ref": "SO-1013",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "ship",
+        "ref": "SO-1014",
+        "ok": false,
+        "why": "stopped at create: unclassified: POST /v1/external/orders/create/adhoc: HTTP 429: {\"message\": \"Too Many Attempts."
+      },
+      {
+        "kind": "ship",
+        "ref": "SO-1015",
+        "ok": false,
+        "why": "0 orders exist"
+      },
+      {
+        "kind": "ship",
+        "ref": "SO-1016",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "ship",
+        "ref": "SO-1017",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "ship",
+        "ref": "SO-1018",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "ship",
+        "ref": "SO-1019",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "ship",
+        "ref": "SO-1020",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "ship",
+        "ref": "SO-1021",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "ship",
+        "ref": "SO-1022",
+        "ok": false,
+        "why": "stopped at track: unclassified: GET /v1/external/courier/track/awb/1410100022: HTTP 429: {\"message\": \"Too Many A"
+      },
+      {
+        "kind": "ship",
+        "ref": "SO-1023",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "ship",
+        "ref": "SO-1024",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "ship",
+        "ref": "SO-1025",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "ship",
+        "ref": "SO-1026",
+        "ok": false,
+        "why": "stopped at create: unclassified: POST /v1/external/orders/create/adhoc: HTTP 422: {\"message\": \"Order Id SO-1026 a"
+      },
+      {
+        "kind": "ship",
+        "ref": "SO-1027",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "ship_fix_input",
+        "ref": "SO-2000",
+        "ok": false,
+        "why": "stopped at pickup: unclassified: POST /v1/external/courier/generate/pickup: HTTP 400: {\"message\": \"Already in Pic"
+      },
+      {
+        "kind": "ship_fix_input",
+        "ref": "SO-2001",
+        "ok": false,
+        "why": "0 orders exist"
+      },
+      {
+        "kind": "ship_fix_input",
+        "ref": "SO-2002",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "ship_fix_input",
+        "ref": "SO-2003",
+        "ok": false,
+        "why": "0 orders exist"
+      },
+      {
+        "kind": "ship_fix_input",
+        "ref": "SO-2004",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "ship_fix_input",
+        "ref": "SO-2005",
+        "ok": false,
+        "why": "0 orders exist"
+      },
+      {
+        "kind": "cancel",
+        "ref": "SO-3000",
+        "ok": false,
+        "why": "stopped at cancel: unclassified: POST /v1/external/orders/cancel: HTTP 401: {\"message\": \"Token has expired\", \"sta"
+      },
+      {
+        "kind": "cancel",
+        "ref": "SO-3001",
+        "ok": false,
+        "why": "stopped at create: unclassified: POST /v1/external/orders/create/adhoc: HTTP 401: {\"message\": \"Token has expired\""
+      },
+      {
+        "kind": "cancel",
+        "ref": "SO-3002",
+        "ok": false,
+        "why": "stopped at create: unclassified: POST /v1/external/orders/create/adhoc: HTTP 401: {\"message\": \"Token has expired\""
+      },
+      {
+        "kind": "cancel",
+        "ref": "SO-3003",
+        "ok": false,
+        "why": "stopped at create: unclassified: POST /v1/external/orders/create/adhoc: HTTP 401: {\"message\": \"Token has expired\""
+      },
+      {
+        "kind": "cancel",
+        "ref": "SO-3004",
+        "ok": false,
+        "why": "stopped at create: unclassified: POST /v1/external/orders/create/adhoc: HTTP 401: {\"message\": \"Token has expired\""
+      },
+      {
+        "kind": "cancel",
+        "ref": "SO-3005",
+        "ok": false,
+        "why": "stopped at create: unclassified: POST /v1/external/orders/create/adhoc: HTTP 401: {\"message\": \"Token has expired\""
+      },
+      {
+        "kind": "cancel",
+        "ref": "SO-3006",
+        "ok": false,
+        "why": "stopped at create: unclassified: POST /v1/external/orders/create/adhoc: HTTP 401: {\"message\": \"Token has expired\""
+      },
+      {
+        "kind": "cancel",
+        "ref": "SO-3007",
+        "ok": false,
+        "why": "stopped at create: unclassified: POST /v1/external/orders/create/adhoc: HTTP 401: {\"message\": \"Token has expired\""
+      },
+      {
+        "kind": "unserviceable",
+        "ref": "SO-4000",
+        "ok": false,
+        "why": "did not report the pincode as unserviceable"
+      },
+      {
+        "kind": "unserviceable",
+        "ref": "SO-4001",
+        "ok": false,
+        "why": "did not report the pincode as unserviceable"
+      },
+      {
+        "kind": "unserviceable",
+        "ref": "SO-4002",
+        "ok": false,
+        "why": "did not report the pincode as unserviceable"
+      },
+      {
+        "kind": "unserviceable",
+        "ref": "SO-4003",
+        "ok": false,
+        "why": "did not report the pincode as unserviceable"
+      },
+      {
+        "kind": "track_unknown",
+        "ref": "99093570372",
+        "ok": false,
+        "why": "did not report the unknown AWB as not found"
+      },
+      {
+        "kind": "track_unknown",
+        "ref": "99334158799",
+        "ok": false,
+        "why": "did not report the unknown AWB as not found"
+      },
+      {
+        "kind": "track_unknown",
+        "ref": "99357111100",
+        "ok": false,
+        "why": "did not report the unknown AWB as not found"
+      },
+      {
+        "kind": "track_unknown",
+        "ref": "99016266656",
+        "ok": false,
+        "why": "did not report the unknown AWB as not found"
+      }
+    ]
+  },
+  {
+    "scenario": "expiry",
+    "resilient": true,
+    "seed": 3,
+    "succeeded": 50,
+    "tasks": 50,
+    "seconds": 6.2,
+    "tool_calls": 208,
+    "client": {
+      "calls": 213,
+      "attempts": 278,
+      "retries": 65,
+      "refreshes": 2,
+      "logins": 3
+    },
+    "server": {
+      "requests": 281,
+      "429": 38,
+      "5xx": 17,
+      "timeouts": 4,
+      "lost": 6,
+      "expired_token": 0
+    },
+    "by_kind": {
+      "ship": "28/28",
+      "ship_fix_input": "6/6",
+      "cancel": "8/8",
+      "unserviceable": "4/4",
+      "track_unknown": "4/4"
+    },
+    "failures": [],
+    "results": [
+      {
+        "kind": "ship",
+        "ref": "SO-1000",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "ship",
+        "ref": "SO-1001",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "ship",
+        "ref": "SO-1002",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "ship",
+        "ref": "SO-1003",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "ship",
+        "ref": "SO-1004",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "ship",
+        "ref": "SO-1005",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "ship",
+        "ref": "SO-1006",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "ship",
+        "ref": "SO-1007",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "ship",
+        "ref": "SO-1008",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "ship",
+        "ref": "SO-1009",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "ship",
+        "ref": "SO-1010",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "ship",
+        "ref": "SO-1011",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "ship",
+        "ref": "SO-1012",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "ship",
+        "ref": "SO-1013",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "ship",
+        "ref": "SO-1014",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "ship",
+        "ref": "SO-1015",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "ship",
+        "ref": "SO-1016",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "ship",
+        "ref": "SO-1017",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "ship",
+        "ref": "SO-1018",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "ship",
+        "ref": "SO-1019",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "ship",
+        "ref": "SO-1020",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "ship",
+        "ref": "SO-1021",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "ship",
+        "ref": "SO-1022",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "ship",
+        "ref": "SO-1023",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "ship",
+        "ref": "SO-1024",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "ship",
+        "ref": "SO-1025",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "ship",
+        "ref": "SO-1026",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "ship",
+        "ref": "SO-1027",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "ship_fix_input",
+        "ref": "SO-2000",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "ship_fix_input",
+        "ref": "SO-2001",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "ship_fix_input",
+        "ref": "SO-2002",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "ship_fix_input",
+        "ref": "SO-2003",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "ship_fix_input",
+        "ref": "SO-2004",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "ship_fix_input",
+        "ref": "SO-2005",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "cancel",
+        "ref": "SO-3000",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "cancel",
+        "ref": "SO-3001",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "cancel",
+        "ref": "SO-3002",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "cancel",
+        "ref": "SO-3003",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "cancel",
+        "ref": "SO-3004",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "cancel",
+        "ref": "SO-3005",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "cancel",
+        "ref": "SO-3006",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "cancel",
+        "ref": "SO-3007",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "unserviceable",
+        "ref": "SO-4000",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "unserviceable",
+        "ref": "SO-4001",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "unserviceable",
+        "ref": "SO-4002",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "unserviceable",
+        "ref": "SO-4003",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "track_unknown",
+        "ref": "99093570372",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "track_unknown",
+        "ref": "99334158799",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "track_unknown",
+        "ref": "99357111100",
+        "ok": true,
+        "why": ""
+      },
+      {
+        "kind": "track_unknown",
+        "ref": "99016266656",
+        "ok": true,
+        "why": ""
+      }
+    ]
+  }
+]
